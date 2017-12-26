@@ -25,4 +25,11 @@ main(List<String> arguments) {
 
   Runes heartRune = new Runes('\u0B85 \u0BAE \u0BCD \u0BAE \u0BBE');
   print(new String.fromCharCodes(heartRune));
+
+  optionalTypes(a: 1, b: 3);
+  optionalTypes(b: 3); //default value
+}
+
+void optionalTypes({int a = 10, int b}) {
+  print("Value of given $a, $b");
 }
