@@ -21,5 +21,8 @@ main(List<String> arguments) {
   gifts.forEach((key, value) => print(key + ", "+ value));
 
   var names = ["Tham", "Apple", "dream"];
-  names.forEach((name) => print(name));
+  names.forEach(print);
+
+  Runes heartRune = new Runes('\u0B85 \u0BAE \u0BCD \u0BAE \u0BBE');
+  print(new String.fromCharCodes(heartRune));
 }
