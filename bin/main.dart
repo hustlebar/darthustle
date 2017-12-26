@@ -1,6 +1,8 @@
 import 'package:darthustle/darthustle.dart' as darthustle;
 import 'package:darthustle/calculator.dart' as calculator;
 
+import 'package:darthustle/person.dart';
+
 main(List<String> arguments) {
   print('Hello world: ${darthustle.calculate()}!');
 
@@ -28,8 +30,18 @@ main(List<String> arguments) {
 
   optionalTypes(a: 1, b: 3);
   optionalTypes(b: 3); //default value
+
+  testAs();
 }
 
 void optionalTypes({int a = 10, int b}) {
   print("Value of given $a, $b");
+}
+
+void testAs() {
+  var person = new Person(name: 'Tham');
+  print(person.name);
+
+  Person tham = person as Person;
+  print(tham.name);
 }
