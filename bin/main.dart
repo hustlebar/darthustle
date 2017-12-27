@@ -25,7 +25,7 @@ main(List<String> arguments) {
   var names = ["Tham", "Apple", "dream"];
   names.forEach(print);
 
-  Runes heartRune = new Runes('\u0B85 \u0BAE \u0BCD \u0BAE \u0BBE');
+  Runes heartRune = new Runes('\u0B85\u0BAE\u0BCD\u0BAE\u0BBE');
   print(new String.fromCharCodes(heartRune));
 
   optionalTypes(a: 1, b: 3);
