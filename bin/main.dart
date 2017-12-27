@@ -35,6 +35,10 @@ main(List<String> arguments) {
   testAs();
 
   optionalParams("Tham", 35, "Chennai");
+
+  //Closure function and passing arguments
+  var add = test(10);
+  print(add(5));
 }
 
 void optionalTypes({int a = 10, int b}) {
@@ -56,4 +60,8 @@ void testAs() {
 
   Person tham = person as Person;
   print(tham.name);
+}
+
+Function test(num value) {
+  return (num i) => i + value;
 }
