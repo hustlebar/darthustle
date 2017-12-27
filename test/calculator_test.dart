@@ -7,8 +7,9 @@ void main() {
       divide(4, 0);
     } on IntegerDivisionByZeroException {
       print("Error catched");
-    } on CalculatorException catch(e) {
+    } on CalculatorException catch(e, s) {
       print(e.message);
+      print("Stack: $s");
     }
   });
 }
