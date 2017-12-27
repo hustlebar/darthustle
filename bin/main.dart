@@ -33,10 +33,21 @@ main(List<String> arguments) {
   optionalTypes(b: 3); //default value
 
   testAs();
+
+  optionalParams("Tham", 35, "Chennai");
 }
 
 void optionalTypes({int a = 10, int b}) {
   print("Value of given $a, $b");
+}
+
+void optionalParams(String name, int age, [String city]) {
+  var message = "Hello $name, Welcome to $age club!";
+  if (city != null) {
+    message = "$message and lives in $city";
+  }
+
+  print(message);
 }
 
 void testAs() {
