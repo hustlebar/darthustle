@@ -9,4 +9,29 @@ void forLoop() {
   }
 
   print("Buffer $buffer");
+
+  var widgets = [];
+  for (var i = 0; i < 10; i++) {
+    widgets.add(i);
+  }
+
+  widgets.forEach((widget) => print(widget));
+}
+
+void switchCase(var color) {
+  var message;
+  switch (color) {
+    case 'RED':
+      message = "I am RED";
+      break;
+
+    case 'BLACK':
+      message = "I am BLACK";
+      break;
+
+    default:
+      message = "I am WHITE by default";
+  }
+
+  print(message);
 }

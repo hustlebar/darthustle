@@ -13,4 +13,8 @@ void main() {
   test('forLoop', () {
     forLoop();
   });
+
+  test('switchCase', () {
+    switchCase('black');
+  });
 }
