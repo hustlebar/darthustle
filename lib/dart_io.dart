@@ -3,11 +3,10 @@ import 'dart:io';
 
 Future readFile() async {
   try {
-    var file = new File("hello.json");
-    var content = await file.readAsLines();
+    var content = await new File('hello.json').readAsString();
     print("Content of the file is $content");
-  } catch (e, s) {
-    print("$e, $s");
+  } catch (e) {
+    print(e);
   }
 }
 
