@@ -2,6 +2,7 @@ import 'package:darthustle/darthustle.dart' as darthustle;
 import 'package:darthustle/calculator.dart' as calculator;
 
 import 'package:darthustle/person.dart';
+import 'package:darthustle/dart_io.dart';
 
 main(List<String> arguments) {
   print('Hello world: ${darthustle.calculate()}!');
@@ -52,6 +53,8 @@ void optionalParams(String name, int age, [String city]) {
   }
 
   print(message);
+
+  readFile();
 }
 
 void testAs() {
