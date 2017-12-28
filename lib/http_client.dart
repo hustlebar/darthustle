@@ -12,7 +12,10 @@ Future main() async {
   print(response.statusCode);
   print(response.headers);
 
-  response.transform(UTF8.decoder).listen((data) => print(data));
+  response.transform(UTF8.decoder).listen((data) {
+    var json = new JsonDecoder().convert(data);
+    print(json);
+  });
 
   client.close();
 }
