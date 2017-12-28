@@ -10,3 +10,7 @@ Future readFile() async {
     print("$e, $s");
   }
 }
+
+void main() {
+  readFile();
+}
