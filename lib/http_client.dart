@@ -13,8 +13,10 @@ Future main() async {
   print(response.headers);
 
   response.transform(UTF8.decoder).listen((data) {
-    var json = new JsonDecoder().convert(data);
-    print(json);
+    Map<String, String> json = new JsonDecoder().convert(data);
+    json.keys.forEach((key) {
+      print(json[key]);
+    });
   });
 
   client.close();
