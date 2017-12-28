@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'dart:convert';
 
 Future readFile() async {
   try {
@@ -10,6 +11,21 @@ Future readFile() async {
   }
 }
 
+Future streamFile() async {
+  var file = await new File('./hello.json');
+  Stream<List<int>> stream = file.openRead();
+  var lines = stream.transform(UTF8.decoder)
+    .transform(new LineSplitter());
+
+  try {
+    await for (var line in lines) {
+      print(line);
+    }
+  } catch (e) {
+    print ("Error $e");
+  }
+}
+
 void main() {
-  readFile();
+  streamFile();
 }
