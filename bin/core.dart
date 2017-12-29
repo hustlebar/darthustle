@@ -5,7 +5,7 @@ void main() {
   collection();
 
   stopwatch.stop();
-  print('Time taken: ${stopwatch.elapsedMilliseconds}');
+  print('Time taken: ${stopwatch.elapsedTicks}');
 }
 
 void collection() {
@@ -48,4 +48,6 @@ void dateTime() {
   DateTime tomorrow = today.add(new Duration(days: 10));
   Duration diff = tomorrow.difference(today);
   print(diff.inDays);
+
+  print(identical(today, today));
 }
