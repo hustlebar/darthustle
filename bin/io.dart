@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 void platform() {
@@ -9,8 +10,17 @@ void platform() {
   print('environment: ${Platform.environment}');
   print('operatingSystem: ${Platform.operatingSystem}');
   print('executable: ${Platform.executable}');
+
+  print('numberOfProcessors: ${Platform.numberOfProcessors}');
+}
+
+Future file() async {
+  var file = new File('./bin/hello.json');
+  var content = await file.readAsString();
+
+  print(content);
 }
 
 void main() {
-  platform();
+  file();
 }
