@@ -1,5 +1,11 @@
 void main() {
+  var stopwatch = new Stopwatch();
+  stopwatch.start();
+
   collection();
+
+  stopwatch.stop();
+  print('Time taken: ${stopwatch.elapsedMilliseconds}');
 }
 
 void collection() {
