@@ -1,19 +1,23 @@
 void main() {
-  var stopwatch = new Stopwatch();
-  stopwatch.start();
-
   collection();
+}
 
-  stopwatch.stop();
-  print('Time taken: ${stopwatch.elapsedTicks}');
+void base() {
+  int value = 15;
+  print(value.gcd(2));
 }
 
 void collection() {
+  var stopwatch = new Stopwatch();
+  stopwatch.start();
+
   //List
   List players = new List<String>();
   players.addAll(["Roger", "Paes", "Nadal", "Joko"]);
   players.add("Roger");
   players.forEach((player) => print(player));
+
+  print(players.join(', '));
 
   players.removeLast();
   print(players);
@@ -38,6 +42,9 @@ void collection() {
   persons.forEach((key, value) => print('$key, $value'));
   persons.putIfAbsent("Joko", ()=> "Serbia");
   persons.forEach((key, value) => print('$key, $value'));
+
+  stopwatch.stop();
+  print('Time taken: ${stopwatch.elapsedTicks}');
 }
 
 void dateTime() {
