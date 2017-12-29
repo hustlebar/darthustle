@@ -12,7 +12,7 @@ Future readFile() async {
 }
 
 Future streamFile() async {
-  var file = await new File('./hello.json');
+  var file = await new File('hello.json');
   Stream<List<int>> stream = file.openRead();
   var lines = stream.transform(UTF8.decoder)
     .transform(new LineSplitter());
@@ -22,7 +22,7 @@ Future streamFile() async {
       print(line);
     }
   } catch (e) {
-    print ("Error $e");
+    print ("Error while reading file: $e");
   }
 }
 
