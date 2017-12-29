@@ -19,7 +19,9 @@ void collection() {
 
   print(players.join(', '));
 
-  players.removeLast();
+  players.retainWhere((player) => player.toString().contains('R'));
+
+//  players.removeLast();
   print(players);
 
   players.sort((a, b) => a.compareTo(b));
