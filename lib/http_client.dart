@@ -11,6 +11,7 @@ Future main() async {
   
   print(response.statusCode);
   print(response.headers);
+  print(response.length);
 
   response.transform(UTF8.decoder).listen((data) {
     Map<String, String> json = new JsonDecoder().convert(data);
