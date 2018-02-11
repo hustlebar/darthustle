@@ -8,7 +8,7 @@ abstract class Shape {
       return new Square(2);
     }
 
-    throw 'Type is not identified';
+    throw 'Type is not defined';
   }
 
   num get area;
